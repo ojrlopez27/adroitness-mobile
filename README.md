@@ -4,7 +4,7 @@ Adroitness is an efficient Android-based middleware for building robust, high-pe
 
 ## Citation
 
-Please cite the [ICSA 2018 paper](in press) if you use Adoitness in your work:
+Please cite the [ICSA 2018 paper](in press) if you use Adroitness in your work:
 
 ```
 @inproceedings{adroitness:2018,
