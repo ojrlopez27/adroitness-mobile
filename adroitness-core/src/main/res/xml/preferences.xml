@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="com.aware.plugin.activityrecognition"
+    android:title="Google Activity Recognition" >
+
+    <com.aware.ui.Aware_Toolbar android:title="@string/ar_name" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="status_plugin_google_activity_recognition"
+        android:persistent="true"
+        android:summary="Detects: still, on foot, in vehicle, on bicycle"
+        android:title="Active" />
+
+    <EditTextPreference
+        android:defaultValue="60"
+        android:key="frequency_plugin_google_activity_recognition"
+        android:persistent="true"
+        android:summary="60 seconds"
+        android:title="Activity recognition interval (in seconds)"
+        android:inputType="numberDecimal" />
+
+</PreferenceScreen>

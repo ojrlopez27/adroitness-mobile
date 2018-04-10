@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_border">
+
+    <include android:id="@+id/decoration_toolbar" layout="@layout/decoration_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        >
+
+        <edu.cmu.adroitness.client.services.calendar.view.CompactCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="400dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:layout_height="200dp"
+            app:compactCalendarTextSize="12sp"
+            app:compactCalendarBackgroundColor="#5058ce"
+            app:compactCalendarTextColor="#fff"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#8f91ba"
+            app:compactCalendarCurrentDayBackgroundColor="#CC99FF"
+            android:background="@drawable/background_border"
+            android:layout_marginTop="55dp"
+            />
+        <Button
+            android:id="@+id/deleteAllEventsButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Delete All Events"
+            android:onClick="deleteAllEvents"
+            android:layout_below="@id/compactcalendar_view"
+            android:layout_marginLeft="80dp"/>
+    </RelativeLayout>
+</RelativeLayout>

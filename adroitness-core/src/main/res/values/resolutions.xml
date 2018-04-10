@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="resolutions_prompt">Resolution</string>
+    <string-array id="@+id/resolution_array_id" name="resolutions_array">
+        <item>320x240</item>
+        <item>640x480</item>
+        <item>1280x940</item>
+    </string-array>
+</resources>

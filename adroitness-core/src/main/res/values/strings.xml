@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--AWARE-->
+    <string name="app_name">Middleware</string>
+    <string name="location_name">Fuse Location</string>
+    <string name="ar_name">Activity Recognition</string>
+    <string name="aware_description">AWARE is an Android\'s framework dedicated to infer, log and share mobile context information between mobile applications. Visit www.awareframework.com for details.</string>
+    <string name="read_permission">Allow read-only access to the Context Providers data.</string>
+    <string name="write_permission">Allow read and write access to the Context Providers data.</string>
+    <string name="drawer_open">Opened</string>
+    <string name="drawer_close">Closed</string>
+    <string name="aware_studies">AWARE Studies</string>
+    <string name="aware_sensors">AWARE</string>
+    <string name="aware_stream">AWARE Stream</string>
+    <string name="aware_plugins">AWARE Plugins</string>
+    <string name="aware_camera_scan">QRCode</string>
+    <string name="aware_developer">Developer</string>
+    <string name="aware_debug_title">Debug</string>
+    <string name="aware_debug_summary">Show in ADB Logcat all debug messages for plugins and AWARE</string>
+    <string name="aware_debug_tag">Logcat tag (by default: AWARE)</string>
+    <string name="aware_debug_tag_summary">Overrides the ADB logcat tag</string>
+    <string name="aware_auto_update">Check for updates</string>
+    <string name="aware_auto_update_version">Installed version is ???</string>
+    <string name="aware_device_id">AWARE Device ID</string>
+    <string name="aware_esm_questions">Mobile ESM waiting...</string>
+    <string name="aware_activate_accessibility">Activate AWARE in Accessibility Services.</string>
+    <string name="aware_team">Team</string>
+    <string name="aware_qrcode">QRCode</string>
+    <string name="aware_esm_other">Other</string>
+    <string name="aware_esm_other_follow">Can you be more specific, please?</string>
+    <string name="aware_dirty">Clean old data?</string>
+
+    <string-array name="accuracies">
+        <item>High accuracy (GPS + network + WiFi)</item>
+        <item>Medium accuracy (network + WiFi)</item>
+        <item>Low accuracy (network only)</item>
+        <item>Opportunistic (reused location)</item>
+    </string-array>
+
+    <!--NEWS-->
+    <string name="news_name">Reader</string>
+    <string name="news_drawer_open">Open navigation drawer</string>
+    <string name="news_drawer_close">Close navigation drawer</string>
+    <string name="news_action_switchview">Switch View</string>
+    <string name="news_action_settings">Settings</string>
+    <string name="news_app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="news_login">login</string>
+    <string name="news_logout">logout</string>
+    <string name="news_not_connected">Network is not connected. Please try again later.</string>
+    <string name="news_i13n_settings">Instrumentation Settings</string>
+    <string name="news_i13n_title">Enable Instrumentation</string>
+    <string name="news_i13n_summary">Allow sending logs to the InMind server to improve usage experiences.</string>
+    <string name="news_trackLocation_title">Enable Location Tracker</string>
+    <string name="news_trackLocation_summary">Allow sending location information to the InMind server to improve usage experiences.</string>
+    <string name="news_trackLocEnabled">trackLocEnabled</string>
+    <string name="news_i13nEnabled">i13nEnabled</string>
+    <string name="news_send_to">Send to</string>
+    <string name="news_graphical_settings">Graphical Settings</string>
+    <string name="news_flipViewEnabled">flipViewEnabled</string>
+    <string name="news_flipViewEnabled_title">Enable FlipView</string>
+    <string name="news_flipViewEnabled_summary">Allow swithcing between ListView and FlipView. FlipView is implemented with the aphidmobile library, and may be susceptible to memory leak when GC is not triggered in a long time.</string>
+    <string name="news_comments">Comments</string>
+    <string name="news_write_comments">Write your comments...</string>
+    <string name="title_activity_recycler_test">RecyclerTestActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="news_base_browser_title">News Browser</string>
+
+
+    <!-- DECISION RULES -->
+    <string-array name="condition_component">
+        <item>[Select Condition Name]</item>
+        <item>ACCELEROMETER</item>
+        <item>CALENDAR</item>
+        <item>WEATHER</item>
+        <item>LOCATION</item>
+    </string-array>
+    <string-array name="accelerometer_attributes">
+        <item>[Select Accelerometer Attribute]</item>
+        <item>ACCELEROMETER_X_AXIS</item>
+        <item>ACCELEROMETER_Y_AXIS</item>
+        <item>ACCELEROMETER_Z_AXIS</item>
+        <item>ACCELEROMETER_FREE_FALL</item>
+    </string-array>
+    <string-array name="calendar_attributes">
+        <item>[Select Calendar Attribute]</item>
+        <item>CALENDAR_START_TIME</item>
+        <item>CALENDAR_END_TIME</item>
+        <item>CALENDAR_START_DATE</item>
+        <item>CALENDAR_END_DATE</item>
+    </string-array>
+    <string-array name="operators">
+        <item>[Select Operator]</item>
+        <item>OPERATOR_HIGHER_THAN</item>
+        <item>OPERATOR_EQUALS_TO</item>
+        <item>OPERATOR_LOWER_THAN</item>
+        <item>OPERATOR_CONTAINS_STRING</item>
+        <item>OPERATOR_DATE_BEFORE</item>
+        <item>OPERATOR_DATE_AFTER</item>
+        <item>OPERATOR_DATE_EQUAL</item>
+        <item>OPERATOR_TIME_EQUAL</item>
+        <item>OPERATOR_TIME_BEFORE</item>
+        <item>OPERATOR_TIME_AFTER</item>
+    </string-array>
+    <string-array name="ref_value">
+        <item>[Select Ref Value]</item>
+        <item>CLOCK_NOW</item>
+        <item>CLOCK_TODAY</item>
+        <item>CLOCK_TOMORROW</item>
+        <item>CLOCK_YESTERDAY</item>
+        <item>CLOCK_MONDAYS</item>
+        <item>CLOCK_TUESDAYS</item>
+    </string-array>
+    <string-array name="action_component">
+        <item>[Select Action Name]</item>
+        <item>ALARM</item>
+        <item>TOAST</item>
+        <item>SMS</item>
+        <item>EMAIL</item>
+    </string-array>
+    <string-array name="alarm_attributes">
+        <item>[Select Alarm Attribute]</item>
+        <item>ALARM_CONDITION_AT</item>
+        <item>ALARM_CONDITION_BEFORE</item>
+        <item>ALARM_CONDITION_AFTER</item>
+        <item>ALARM_REFERENCE_TIME</item>
+        <item>ALARM_RINGTONE_TYPE</item>
+    </string-array>
+    <string-array name="alarm_values">
+        <item>[Select Alarm Value]</item>
+        <item>ALARM_TIME_NOW</item>
+        <item>ALARM_ONE_HOUR_BEFORE</item>
+        <item>ALARM_TYPE_NOTIFICATION</item>
+    </string-array>
+    <string-array name="toast_attributes">
+        <item>TOAST_MESSAGE</item>
+    </string-array>
+    <string-array name="toast_values">
+        <item>[Select a Message]</item>
+        <item>MESSAGE_1</item>
+        <item>MESSAGE_2</item>
+        <item>MESSAGE_3</item>
+        <item>MESSAGE_4</item>
+    </string-array>
+    <string-array name="hours">
+        <item>[Select a Message]</item>
+        <item>00:00 AM</item>
+        <item>01:00 AM</item>
+        <item>02:00 AM</item>
+        <item>03:00 AM</item>
+        <item>04:00 AM</item>
+        <item>05:00 AM</item>
+        <item>06:00 AM</item>
+        <item>07:00 AM</item>
+        <item>08:00 AM</item>
+        <item>09:00 AM</item>
+        <item>10:00 AM</item>
+        <item>11:00 AM</item>
+        <item>12:00</item>
+        <item>01:00 PM</item>
+        <item>02:00 PM</item>
+        <item>03:00 PM</item>
+        <item>04:00 PM</item>
+        <item>05:00 PM</item>
+        <item>06:00 PM</item>
+        <item>07:00 PM</item>
+        <item>08:00 PM</item>
+        <item>09:00 PM</item>
+        <item>10:00 PM</item>
+        <item>11:00 PM</item>
+    </string-array>
+
+    <!-- Red5 Streaming -->
+    <string name="preference_host">settings.stream.host</string>
+    <string name="preference_port">settings.stream.port</string>
+    <string name="preference_ss_port">settings.secondscreen.port</string>
+    <string name="preference_app">settings.stream.app</string>
+    <string name="preference_ss_app">settings.secondscreen.app</string>
+    <string name="preference_name">settings.stream.name</string>
+    <string name="preference_bitrate">settings.stream.bitrate</string>
+    <string name="preference_audio">settings.stream.audio</string>
+    <string name="preference_video">settings.stream.video</string>
+
+    <string name="preference_default_host">52.87.183.217</string>
+    <string name="preference_default_port">8554</string>
+    <string name="preference_default_ss_port">8088</string>
+    <string name="preference_default_app">live</string>
+    <string name="preference_default_ss_app">secondscreen</string>
+    <string name="preference_default_name">myStream</string>
+    <string name="preference_default_bitrate">128</string>
+    <!--CALENDAR-->
+    <string name="calendar_title">Personal Calendar</string>
+
+    <!--SUGILITE-->
+    <string name="sugilite_accessibility_extended">InMind - Sugilite tracking service</string>
+
+    <!--EMAIL UNDERSTANDING-->
+    <string-array name="email_extraction_options">
+        <item>Extract Email Features</item>
+        <item>Extract Summary</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Google Speech -->
+    <string name="permission_message">This app needs to record audio and recognize your speech.</string>
+    <string name="listening">Listening…</string>
+</resources>

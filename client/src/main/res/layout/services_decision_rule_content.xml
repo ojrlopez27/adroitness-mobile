@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+    <!--tools:conteedu.cmu.adroitness.servicesices.rules.view.DecisionRuleActivity"-->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:columnCount="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Condition:"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/labelCondition"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Component Name:"
+            android:layout_gravity="left"
+            android:id="@+id/componentCondTxt"
+            />
+
+        <Spinner
+            android:id="@+id/componentCondSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Attribute:"
+            android:layout_gravity="left"
+            android:id="@+id/atributeCondTxt"
+            />
+
+        <Spinner
+            android:id="@+id/attributeCondSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Operator:"
+            android:layout_gravity="left"
+            android:id="@+id/operatorCondTxt"
+            />
+
+        <Spinner
+            android:id="@+id/operatorCondSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Value:"
+            android:layout_gravity="left"
+            android:id="@+id/valueCondTxt"
+            />
+
+        <EditText
+            android:id="@+id/valueCondEdit"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"/>
+
+        <TextView
+            android:layout_column="0"
+            android:text="Reference Value:"
+            android:layout_gravity="left"
+            android:id="@+id/refCondTxt"
+            />
+
+        <Spinner
+            android:id="@+id/refCondSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Action:"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/labelAction"
+            />
+        <TextView
+            android:layout_column="0"
+            android:text="Component Name:"
+            android:layout_gravity="left"
+            android:id="@+id/componentAccTxt"
+            />
+
+        <Spinner
+            android:id="@+id/componentAccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:layout_column="0"
+            android:id="@+id/attribute1AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/val1AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:layout_column="0"
+            android:id="@+id/attribute2AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+            />
+
+        <Spinner
+            android:id="@+id/val2AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:layout_column="0"
+            android:id="@+id/attribute3AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/val3AccSpinner"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown" />
+
+        <!--<Spinner-->
+            <!--android:layout_column="0"-->
+            <!--android:id="@+id/attribute4AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/val4AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+
+        <!--<Spinner-->
+            <!--android:layout_column="0"-->
+            <!--android:id="@+id/attribute5AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/val5AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+        <!--<Spinner-->
+            <!--android:layout_column="0"-->
+            <!--android:id="@+id/attribute6AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/val6AccSpinner"-->
+            <!--android:layout_gravity="left"-->
+            <!--android:ems="10"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:spinnerMode="dropdown" />-->
+
+
+        <Button
+            android:text="Generate Rule"
+            android:id="@+id/generateRulesBtn"
+            android:layout_row="18"
+            android:layout_column="0"
+            android:onClick="generateRules"
+            />
+
+        <Button
+            android:text="Remove Rules"
+            android:id="@+id/removeRulesBtn"
+            android:layout_row="18"
+            android:layout_column="1"
+            android:onClick="removeRules"
+            />
+    </GridLayout>
+</RelativeLayout>

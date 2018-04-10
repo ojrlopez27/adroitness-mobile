@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.cmu.adroitness.client.services.email.view.GmailActivity">
+    <include android:id="@+id/decoration_toolbar" layout="@layout/decoration_toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/gmailMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/gmailLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/gmailStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retrieving email Messages..."
+                android:typeface="normal" />
+            <ListView
+                android:id="@+id/emailsListView"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:layout_below="@+id/gmailStatus"></ListView>
+
+            <Button
+                android:id="@+id/viewEmail"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="View"
+                />
+
+            <Button
+                android:id="@+id/replyEmail"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="-50dp"
+                android:text="Reply"
+                />
+            <Button
+                android:id="@+id/replyToAllEmail"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="-50dp"
+                android:text="Reply All"
+                />
+            <Button
+                android:id="@+id/forwardEmail"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Forward"
+                />
+            <Button
+                android:id="@+id/composeEmailButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="-50dp"
+                android:text="Compose"/>
+        </LinearLayout>
+    </FrameLayout>
+        <ListView
+            android:id="@+id/gmailNavigation"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#0099CC"
+            android:choiceMode="singleChoice"
+            android:divider="#FFFFFF"
+            android:dividerHeight="0dp" />
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

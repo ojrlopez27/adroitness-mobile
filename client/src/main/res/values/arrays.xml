@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_calendar">
+        <item>1. Use provided Calendar Component</item>
+        <item>2. Extends Calendar Component</item>
+        <item>3. Use your own Calendar Controller</item>
+    </string-array>
+
+    <string-array name="accuracies">
+        <item>High accuracy (GPS + network + WiFi)</item>
+        <item>Medium accuracy (network + WiFi)</item>
+        <item>Low accuracy (network only)</item>
+        <item>Opportunistic (reused location)</item>
+    </string-array>
+    <string-array name="locationType">
+        <item> -select- </item>
+        <item>Use Current Location</item>
+        <item>Use Photo Metadata</item>
+        <item>Use Past Location data</item>
+    </string-array>
+    <string-array name="keywordCategory">
+        <item> -select- </item>
+        <item>General</item>
+        <item>Food</item>
+        <item>Events</item>
+        <item>Activities</item>
+        <item>Places</item>
+    </string-array>
+    <string-array name="gender_array">
+        <item> -select- </item>
+        <item>male</item>
+        <item>female</item>
+        <item>other</item>
+        <item>prefer not to disclose</item>
+    </string-array>
+
+    <string-array name="type_sugilite">
+        <item>1. Original</item>
+        <item>2. Using Middleware</item>
+    </string-array>
+</resources>

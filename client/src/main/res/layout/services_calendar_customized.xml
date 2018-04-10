@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".services.calendar.view.CustomizedCalendarActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Query Calendar Events"
+        android:id="@+id/queryCalendarEventsBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="queryCalendarEvents"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Calendar Event"
+        android:id="@+id/createCalendarEventsBtn"
+        android:layout_below="@+id/queryCalendarEventsBtn"
+        android:layout_alignParentStart="true"
+        android:onClick="createCalendarEvent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Calendar Event"
+        android:id="@+id/updateCalendarEventsBtn"
+        android:layout_below="@+id/createCalendarEventsBtn"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCalendarEvent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Calendar Event"
+        android:id="@+id/deleteCalendarEventsBtn"
+        android:layout_below="@+id/updateCalendarEventsBtn"
+        android:layout_alignParentStart="true"
+        android:onClick="deleteCalendarEvent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete All Calendar Events"
+        android:id="@+id/deleteAllCalendarEventsBtn"
+        android:layout_below="@+id/deleteCalendarEventsBtn"
+        android:layout_alignParentStart="true"
+        android:onClick="deleteAllCalendarEvents"/>
+</RelativeLayout>

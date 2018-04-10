@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inMind.inMindAgent.MainActivity" >
+
+    <!-- <Button -->
+    <!-- android:id="@+id/button_rec" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_above="@+id/button_stop" -->
+    <!-- android:layout_alignLeft="@+id/text_to_talk" -->
+    <!-- android:text="Start" /> -->
+
+    <ImageView
+        android:id="@+id/rapport_image_recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rapport_button_stop"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/not_recording" />
+
+    <ImageButton
+        android:id="@+id/rapport_button_rec"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="19dp"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <Button
+        android:id="@+id/rapport_button_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rapport_button_rec"
+        android:layout_alignLeft="@+id/rapport_button_rec"
+        android:text="Stop" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/rapport_button_rec"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/background" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/decoration_toolbar" layout="@layout/decoration_toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/calendar_ui_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/calendarMain"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/calendarRelative"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retrieving Data..."
+                    android:typeface="normal" />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_above="@+id/createEventBtn"
+                    android:layout_below="@+id/statusText"
+                    android:scrollbars="vertical"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"></ListView>
+
+                <Button
+                    android:id="@+id/createEventBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Create Event"
+                    android:onClick="createEventFragment"/>
+
+                <Button
+                    android:id="@+id/deleteEventsBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="-50dp"
+                    android:text="Delete Event"
+                    android:onClick="deleteEvents"/>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/calendar_navigation"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#0099CC"
+            android:choiceMode="singleChoice"
+            android:divider="#FFFFFF"
+            android:dividerHeight="0dp" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

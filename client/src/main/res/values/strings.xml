@@ -1,0 +1,391 @@
+<!--
+  Copyright 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">InMind</string>
+    <string name="app_news_name">News Reader API</string>
+    <string name="app_login">Login</string>
+    <string name="app_action_settings">Settings</string>
+    <string name="app_action_settings_2">Settings</string>
+    <string name="app_default_reader">Default Reader</string>
+    <string name="app_extended_reader">Extended Reader</string>
+    <string name="app_modified_news">Modified News</string>
+    <string name="app_list_news_items">List news articles</string>
+    <string name="app_custom_reader_layout">Customized Layout</string>
+    <string name="app_navigation_drawer_open">Open navigation drawer</string>
+    <string name="app_navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_exit">Exit</string>
+    <string name="app_exit_action">Exit</string>
+    <string name="app_news_summary_list">News Articles List</string>
+    <string name="app_user_profile">User Profile</string>
+    <string name="app_filtered_news">Filtered News</string>
+    <string name="app_news_commands">News Commands</string>
+    <string name="title_activity_commands">CommandsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example actions</string>
+    <string name="title_activity_graph">GraphActivity</string>
+    <string name="app_behavior_orchestration">Behavior Orchestration</string>
+    <string name="app_feedback">News Feedback</string>
+    <string name="title_activity_audio_record">AudioRecordActivity</string>
+    <string name="app_audio_start">Start</string>
+    <string name="app_audio_stopt">Stop</string>
+    <string name="app_audio_record">Audio Record</string>
+    <string name="app_upload_image">Upload image</string>
+    <string name="app_emma_recommendation">Emma\'s RS</string>
+    <string name="app_william_recommendation">William\'s RS</string>
+    <string name="app_sneha_recommendation">NELL\'s RS</string>
+    <string name="app_merged_rankings">Merging Rankings</string>
+    <string name="app_email">Filter News by Email</string>
+    <string name="title_activity_audio_streaming_test">AudioStreamingTest</string>
+    <string name="app_title">InMind</string>
+
+    <!--Aware-->
+    <string name="title_activity_aware">AwareActivity</string>
+    <string name="title_activity_plugins">Plugins</string>
+    <string name="app_aware"><![CDATA[Sensors & Services]]></string>
+
+    <!--Weather-->
+    <string name="title_activity_my_weather">InMind Weather</string>
+
+    <!--Hotel-->
+    <string name="title_activity_hotel_reservation">Hotel Reservation</string>
+
+    <!--Location-->
+    <string name="title_activity_location">LocationActivity</string>
+
+    <!--Calendar-->
+    <string name="title_activity_my_calendar">InMind Calendar</string>
+    <string name="prompt_type_calendar">Choose the type of Calendar you need:</string>
+
+
+    <!-- Camera -->
+    <string name="image">Image</string>
+    <string name="voice">Voice</string>
+    <string name="stop">Stop</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="ip">IP</string>
+    <string name="port">Port</string>
+    <string name="server_setting_title">Server Setting</string>
+
+    <!--Sugilite-->
+    <string name="prompt_type_sugilite">Choose the type of Sugilite app:</string>
+
+    <!--Rapport-->
+    <string name="news_view">News View</string>
+    <string name="assistant_view">Assistant View</string>
+    <string name="both_view">Both View</string>
+    <string name="woz_view">WoZ View</string>
+    <string name="image_view_title">Image View</string>
+
+    <!--Streaming-->
+    <string name="start">Start/Stop Streaming</string>
+    <string name="flash">Flash</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video Settings</string>
+    <string name="save">OK</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="uri">URI</string>
+    <string name="password_hint">Leave empty if not needed</string>
+    <string name="username_hint">Leave empty if not needed</string>
+    <string name="default_bitrate">0 kbps</string>
+    <string name="title_activity_acceleration">AccelerationActivity</string>
+    <string name="title_activity_stream_server">StreamServerActivity</string>
+    <!--<string name="default_stream">rtsp://192.168.0.102:1935/live/myStream.sdp</string>-->
+    <!--<string name="default_stream">rtsp://128.237.131.99:1935/live/myStream.sdp</string>-->
+    <string name="default_stream">rtsp://192.168.0.102/oflaDemo/stream1459959450500</string>
+    <string name="red5_stream">52.87.183.217:5080/live/myStream</string>
+    <string name="title_activity_decision_rule">Decision Rule Activity</string>
+    <string name="title_activity_examples_main">ExamplesMainActivity</string>
+
+
+    <!--Tasks Understanding-->
+    <string name="speak_prompt">Speak</string>
+    <string name="speech_not_supported">Speech recognition is not supported by our device.</string>
+    <string name="inference_heading">Inference</string>
+    <string name="related_apps_heading">Apps you might find useful</string>
+    <string name="title_activity_email">EmailActivity</string>
+
+    <!--HELPR-->
+    <string name="get_recommendation">Get Recommendation:</string>
+
+    <!--App Tracker-->
+    <string name="start_tracking">Start Tracking:</string>
+    <string name="get_script">Get Script:</string>
+    <string name="stop_tracking">Stop Tracking:</string>
+    <string name="type_script_name">type script name</string>
+    <string name="get_scripts">Get Scripts:</string>
+    <string name="results">Results:</string>
+
+    <!-- Red5 Streaming -->
+    <string name="preference_host">settings.stream.host</string>
+    <string name="preference_port">settings.stream.port</string>
+    <string name="preference_ss_port">settings.secondscreen.port</string>
+    <string name="preference_app">settings.stream.app</string>
+    <string name="preference_ss_app">settings.secondscreen.app</string>
+    <string name="preference_name">settings.stream.name</string>
+    <string name="preference_bitrate">settings.stream.bitrate</string>
+    <string name="preference_audio">settings.stream.audio</string>
+    <string name="preference_video">settings.stream.video</string>
+
+    <string name="preference_default_host">52.87.183.217</string>
+    <string name="preference_default_port">8554</string>
+    <string name="preference_default_ss_port">8088</string>
+    <string name="preference_default_app">live</string>
+    <string name="preference_default_ss_app">secondscreen</string>
+    <string name="preference_default_name">myStream</string>
+    <string name="preference_default_bitrate">128</string>
+
+    <!-- Cherished Memories -->
+    <string-array name="resuest_type_array">
+        <item>GET</item>
+        <item>POST</item>
+    </string-array>
+    <string name="request_type_prompt">Choose type of request</string>
+
+    <!-- Photo Metadata Survey App -->
+    <string name="title_activity_start"></string>
+    <string name="title_activity_percentage">Progress: 1/15</string>
+    <string name="title_activity_qactivity_exif">Progress: 1/14</string>
+    <string name="title_activity_qactivity_exifanswer">Progress: 2/14</string>
+    <string name="title_activity_main">Progress: 3/14</string>
+    <string name="title_activity_guide">Progress: 4/14</string>
+    <string name="title_activity_q1">Progress: 5/14</string>
+    <string name="title_activity_q2">Progress: 6/14</string>
+    <string name="title_activity_q3">Progress: 7/14</string>
+    <string name="title_activity_q4">Progress: 8/14</string>
+    <string name="title_activity_q5">Progress: 9/14</string>
+    <string name="title_activity_q6">Progress: 10/14</string>
+    <string name="title_activity_q7">Progress: 11/14</string>
+    <string name="title_activity_qactivity_extra">Progress: 12/14</string>
+    <string name="title_activity_qactivity_basic">Progress: 13/14</string>
+    <string name="title_activity_finish">Progress: 14/14</string>
+    <string name="title_activity_pay">:)</string>
+    <string name="title_activity_end">:)</string>
+
+    <string name="IRB_checkbox">
+        I am age 18 or older. I have read and understand the information above. I want to participate in this research and continue with the study.
+    </string>
+
+    <string name="question_percentage">How many percent of photos on your phone are taken or screenshotted by you?</string>
+
+    <string name="question_geotag">Based on your knowledge, which of the following most accurately defines "geotagging"? </string>
+    <string name="geotag_o1">A. Remembering where a photo or video is taken, by manually naming the file or naming the folder of the file based on location. </string>
+    <string name="geotag_o2">B. Assigning an electronic tag that indicates a geographical location to a photograph, a video, or a posting on a social media website, manually or automatically by the device. </string>
+    <string name="geotag_o3">C. Showing the user\'s current location on an electronic device, such as a smart phone or a computer. </string>
+    <string name="geotag_o4">D. Tracking the location of an electronic device. </string>
+
+    <string name="answer_geotag">The Correct Answer is ...</string>
+
+    <string name="question_submit">For the purpose of our study, we would like to collect the metadata (date, time, location, image size, ISO, shutter speed, etc.) of your photos on this phone. Metadata wouldn\'t give us any information about the actual content of your photos, because it is a type of completely non-personally identifiable data.
+        \n Could you grant us access to it? This permission is for this one time only. We will not have access to your data after the survey ends.
+    </string>
+
+    <string name="guideline">In the next few screens, you will be asked about your interests in several different areas.
+        Please rate how much interest you have in each of the topics shown. Rate 5 stars for \"very interested,\" and 1 star for \"not interested at all.\" \n
+        \n Also, please make sure your device to connected to the internet right now. \n
+        \n Please take you time to rate all the options with care. Don\'t forget to scroll down to see more options. </string>
+
+    <string name="question_general">What news topics are you interested in? \n </string>
+    <string name="hint_general">Add others.</string>
+
+    <string name="question_movie">What genres of movies do you like? \n </string>
+    <string name="hint_movie">Add other movie genres / movies / filmmakers / performers that you like.</string>
+
+    <string name="question_music">What genres of music do you like? \n </string>
+    <string name="hint_music">Add other music genres / musicians / songs that you like.</string>
+
+    <string name="question_book">What genres of books do you like? \n </string>
+    <string name="hint_book">Add other book genres / books / writers that you like.</string>
+
+    <string name="question_sports">What sports do you like to do or watch? \n </string>
+    <string name="hint_sports">Add other sports / athletes that you like.</string>
+
+    <string name="question_food">What types of food do you like? \n </string>
+    <string name="hint_food">Add other cuisines / dish / restaurants that you like.</string>
+
+    <string name="question_activities">What kind of activities do you like? \n </string>
+    <string name="hint_activities">Add other activities that you like.</string>
+
+    <string name="question_extra">What else are you interested in? Please enter more topics and separate them with commas or semicolons. </string>
+    <string name="hint_extra">e.g. wine, robotics, coffee, anime, trading, cheesecakes, film studies, etc.</string>
+
+    <string name="question_basic">We would like to know some basic information about you.</string>
+    <string name="question_basic_age">What is your age?</string>
+    <string name="question_basic_gender">What is your gender?</string>
+
+    <string name="finish_and_pay">You are done with the survey! Please use the code below to get paid on Mechanical Turk.
+        \n Feel free to contact Joyce Wang (xinyiw@andrew.cmu.edu) if you have any questions. </string>
+    <string name="hint_email">xxxxx@xxxxx.com</string>
+
+    <string name="close_app">You may delete the app now. Please do not redo the survey. \n Thank you so much! Bye bye :) </string>
+    <string name="close_app_18"> Thank you! You may delete the app now.
+        \n You are here because you did not check the box for \"I am age 18 or older; I have read and understand the information above; I want to participate in this research and continue with the study.\" If you are here by mistake and still want to proceed with the survey, please press the \"return\" button on your phone and go back to the previous screen.</string>
+    <string name="close_app_metadata">Thank you! You may delete the app now.
+        \n You are here because you did not agree to share your photo metadata. If you are here by mistake and still want to proceed with the survey, please press the \"return\" button on your phone and go back to the previous screen.</string>
+
+    <string name="dialog_missing_rating">You didn\'t rate some of the items! </string>
+    <string name="dialog_missing_title">Incomplete Input</string>
+    <string name="dialog_missing_item">Please answer everything!</string>
+
+
+    <string-array name="newstopics">
+        <item>Movies</item>
+        <item>TV</item>
+        <item>Theater</item>
+        <item>Music</item>
+        <item>Business</item>
+        <item>Science</item>
+        <item>Technology</item>
+        <item>Politics</item>
+        <item>Travel</item>
+        <item>Art and Design</item>
+        <item>Sports</item>
+        <item>Videogames</item>
+        <item>Fashion</item>
+        <item>Photography</item>
+        <item>History</item>
+        <item>Law</item>
+        <item>Food and Drinks</item>
+        <item>Education</item>
+        <item>Health and Fitness</item>
+    </string-array>
+
+
+    <string-array name="movies">
+        <item>Action</item>
+        <item>Classic</item>
+        <item>Drama</item>
+        <item>Family</item>
+        <item>Horror</item>
+        <item>Independent</item>
+        <item>Musical</item>
+        <item>Romance</item>
+        <item>Science Fiction</item>
+        <item>Fantasy</item>
+        <item>Sports</item>
+        <item>Suspense / Thriller</item>
+    </string-array>
+
+    <string-array name="music">
+        <item>Alternative</item>
+        <item>Children\'s Music</item>
+        <item>Christian &amp; Gospel</item>
+        <item>Classic rock</item>
+        <item>Classical</item>
+        <item>Country</item>
+        <item>Dance / EDM</item>
+        <item>Electronic</item>
+        <item>Hip Pop / Rap</item>
+        <item>Indie</item>
+        <item>Jazz / Blues</item>
+        <item>Metal</item>
+        <item>R&amp;B / Soul</item>
+        <item>Pop</item>
+        <item>Reggae</item>
+        <item>Rock</item>
+    </string-array>
+
+    <string-array name="books">
+        <item>Fiction</item>
+        <item>Non-Fiction</item>
+        <item>Drama</item>
+        <item>Classic</item>
+        <item>Graphic Novel</item>
+        <item>Comics</item>
+        <item>Biography</item>
+        <item>Crime / Detective</item>
+        <item>Suspense / Thriller</item>
+        <item>Mystery</item>
+        <item>Short Stories</item>
+        <item>Fanfiction</item>
+        <item>Memoir</item>
+        <item>Textbook</item>
+        <item>Journalism</item>
+        <item>Self-help Book</item>
+        <item>Essays</item>
+    </string-array>
+
+    <string-array name="sports">
+        <item>Baseball</item>
+        <item>Basketball</item>
+        <item>Extreme Sports</item>
+        <item>Fantasy Sports</item>
+        <item>Football (American)</item>
+        <item>Golf</item>
+        <item>Hockey</item>
+        <item>Motor Sports / NASCAR</item>
+        <item>Soccer</item>
+        <item>Tennis</item>
+        <item>Swimming</item>
+        <item>Skiing / Snowboarding</item>
+    </string-array>
+
+    <string-array name="food">
+        <item>Vegetarian / Vegan</item>
+        <item>Fusion</item>
+        <item>Thai</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Chinese</item>
+        <item>Italian</item>
+        <item>French</item>
+        <item>Mexican</item>
+        <item>Mediterranean</item>
+        <item>Greek</item>
+        <item>Jewish</item>
+        <item>Indian</item>
+        <item>Fast Food</item>
+    </string-array>
+
+    <string-array name="hobby">
+        <item>Cooking</item>
+        <item>Dancing</item>
+        <item>Gardening</item>
+        <item>Drawing / Painting</item>
+        <item>Photography</item>
+        <item>Outdoor activities</item>
+        <item>Traveling</item>
+        <item>Running</item>
+        <item>Museums / Galleries</item>
+        <item>Volunteering</item>
+        <item>Pets</item>
+        <item>Social Activism</item>
+        <item>Theater</item>
+        <item>Reading</item>
+        <item>Knitting</item>
+    </string-array>
+    <string name="title_activity_helpr">HelprActivity</string>
+    <string name="title_activity_chorus">Chorus Activity</string>
+    <string name="title_activity_gmail">Gmail Activity</string>
+    <string name="title_activity_captionGeneration">Caption Generation Activity</string>
+    <string name="confirmation_message_end_chat">Are you sure you want to end the chat?</string>
+    <string name="confirmation_title_end_chat">End Chorus Chat Confirmation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_google_asr">GoogleASR</string>
+    <string name="title_activity_performance_test">PerformanceTestActivity</string>
+    <string name="title_activity_multiuser">MultiuserActivity</string>
+</resources>

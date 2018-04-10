@@ -1,0 +1,191 @@
+
+apply plugin: 'com.google.protobuf'
+apply plugin: 'com.android.library'
+
+ext {
+    supportLibraryVersion = '25.3.1'
+    grpcVersion = '1.4.0'
+    protobufVersion = '3.2.0'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.google.com' }
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+    }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries false
+        incremental true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            multiDexEnabled true
+        }
+    }
+
+    packagingOptions {
+       //  exclude 'project.properties'
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE-2.0'
+        exclude 'META-INF/license.txt'
+        pickFirst 'META-INF/INDEX.LIST'
+        exclude 'META-INF/maven/com.google.protobuf/protobuf-java/pom.xml'
+        exclude 'META-INF/maven/com.google.protobuf/protobuf-java/pom.properties'
+    }
+
+    repositories {
+        mavenCentral()
+
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+configurations.all {
+    // Check for updates every hour.
+    // You can force it to an immediate update by passing 0 instead of 3600
+    resolutionStrategy.cacheChangingModulesFor(3600, 'seconds')
+    resolutionStrategy.cacheDynamicVersionsFor(3600, 'seconds')
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    resolutionStrategy.force "com.android.support:support-annotations:$supportLibraryVersion"
+}
+
+configurations {
+    deployerJars
+    compile.exclude module: 'stax'
+    compile.exclude module: 'stax-api'
+    compile.exclude module: 'xpp3'
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.3.0'
+    }
+    plugins {
+        javalite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                javalite {}
+                grpc {
+                    // Options added to --grpc_out
+                    option 'lite'
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    /** google API's  **/
+    compile('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group:
+                'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-calendar:v3-rev221-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    /** Simple XML framework **/
+    compile('org.simpleframework:simple-xml:2.7') {
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3'
+    }
+
+    /** Google Speech Cloud specific requirements **/
+    compile "com.android.support:design:$supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    // gRPC
+    compile "io.grpc:grpc-okhttp:$grpcVersion"
+    compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    compile "io.grpc:grpc-stub:$grpcVersion"
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    protobuf 'com.google.protobuf:protobuf-java:3.3.1'
+
+    // OAuth2 for Google API
+    compile('com.google.auth:google-auth-library-oauth2-http:0.7.0') {
+        exclude module: 'httpclient'
+    }
+    compile group: 'com.google.cloud', name: 'google-cloud-speech', version: '0.41.0-alpha'
+
+
+    /** Multipart Http Uploads using Volley **/
+    compile('org.apache.httpcomponents:httpmime:4.3.6') {}
+    /** http **/
+    /** Common **/
+    compile 'com.google.api-client:google-api-client-gson:1.22.0'
+    compile 'com.google.android.gms:play-services-location:10.2.0'
+    compile 'com.google.apis:google-api-services-gmail:v1-rev47-1.22.0'
+    compile 'com.google.android.gms:play-services-auth:10.2.0'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.sun.mail:android-mail:1.5.5'
+    compile 'com.sun.mail:android-activation:1.5.5'
+
+
+    compile 'uk.com.robust-it:cloning:1.+'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+    /** guava (ExecutorService, etc) **/
+    compile group: 'com.google.guava', name: 'guava', version: 'r05'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    deployerJars 'org.apache.maven.wagon:wagon-ssh:2.9'
+    provided 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical"
+    tools:context=".services.cherishedmemories.view.CherishedMemoriesActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/background_border"></RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/movie_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_movie"
+        android:scaleType="center"
+        />
+
+    <Spinner
+        android:id="@+id/request_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/resuest_type_array"
+        android:prompt="@string/request_type_prompt" android:layout_below="@+id/movie_icon"/>
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:text="Enter Question"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:id="@+id/titleTxtView"
+        android:layout_below="@+id/request_type_spinner" />
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/titleTxtView"
+        android:background="@drawable/image_border"
+        android:scrollbars="vertical"
+        android:id="@+id/inputQuery"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@+id/inputQuery"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        android:id="@+id/submitButton"
+        />
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:id="@+id/outputTxtView"
+        android:layout_below="@+id/submitButton"
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"/>
+
+
+
+</RelativeLayout>

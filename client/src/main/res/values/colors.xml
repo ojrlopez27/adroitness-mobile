@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#CFD4EC</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--<color name="maroon"> #740808</color>-->
+    <!--<color name="red"> #740808</color>740808-->
+    <color name="defaultOptionColor">#ade1fb</color>
+    <color name="selectOptionColor">#2670b5</color>
+    <color name="textBackground">#f2f2f2</color>
+    <color name="black">#000000</color>
+</resources>

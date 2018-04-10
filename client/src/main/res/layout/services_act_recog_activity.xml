@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/aware_toolbar" layout="@layout/aware_toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/aware_ui_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/frameLocation"
+                android:layout_alignParentTop="true"
+                android:onClick="settingsLocation"
+                />
+            <FrameLayout
+                android:layout_below="@+id/frameLocation"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/frameActivity"
+                android:onClick="settingsActivity"/>
+            <TextView
+                android:layout_below="@+id/frameActivity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/tv"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/activityPlugin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="activityPlugin"
+                android:layout_alignParentBottom="true"/>
+            <Button
+                android:id="@+id/locationPlugin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="locationPlugin"
+                android:layout_above="@+id/activityPlugin"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/aware_navigation"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#0099CC"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

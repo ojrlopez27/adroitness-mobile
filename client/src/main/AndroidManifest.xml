@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.cmu.adroitness.client">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="InMind"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name,android:label,android:icon">
+        <activity
+            android:name="edu.cmu.adroitness.AppMainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.cmu.adroitness.client.services.weather.view.WeatherActivity"
+            android:label="@string/title_activity_my_weather" />
+        <activity
+            android:name="edu.cmu.adroitness.client.services.hotel.view.HotelReservationActivity"
+            android:label="@string/title_activity_hotel_reservation" />
+        <activity
+            android:name="edu.cmu.adroitness.client.services.actrecog.view.ActRecognitionActivity"
+            android:label="@string/title_activity_plugins" />
+        <activity
+            android:name="edu.cmu.adroitness.client.sensors.audio.view.AudioRecordActivity"
+            android:label="@string/title_activity_plugins" />
+        <activity
+            android:name="edu.cmu.adroitness.client.services.location.view.LocationActivity"
+            android:label="@string/title_activity_location" />
+        <activity
+            android:name="edu.cmu.adroitness.client.sensors.accelaration.view.AccelerationActivity"
+            android:label="@string/title_activity_acceleration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.cmu.adroitness.client.services.rules.view.DecisionRuleActivity"
+            android:label="@string/title_activity_decision_rule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="edu.cmu.adroitness.client.services.calendar.view.ExtendedCalendarActivity" />
+        <activity android:name="edu.cmu.adroitness.client.services.calendar.view.CustomizedCalendarActivity" />
+        <activity android:name="edu.cmu.adroitness.client.services.calendar.view.ExtendedCalendarDayDetailActivity" />
+        <activity android:name="edu.cmu.adroitness.client.sensors.sms.view.SmsSensorActivity" />
+        <activity android:name="edu.cmu.adroitness.client.effectors.sms.view.SmsEffectorActivity" />
+        <activity android:name="edu.cmu.adroitness.client.services.nell.view.NELLActivity" />
+
+        <activity
+            android:name="edu.cmu.adroitness.client.services.red5streaming.view.ExtendedRed5StreamingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name="edu.cmu.adroitness.client.services.gmail.view.ExtendedGmailActivity" />
+        <activity android:name="edu.cmu.adroitness.client.services.googlespeechrecognition.view.ExtendedGoogleSpeechRecognizerActivity" />
+        <activity
+            android:name="edu.cmu.adroitness.client.services.googlespeechrecognition.view.GoogleASR"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_google_asr"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

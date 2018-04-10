@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".services.oaqa.view.OAQAActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:columnCount="4" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_column="0"
+            android:text="Question:"
+            android:layout_gravity="left"
+            android:id="@+id/questionLabel"
+            />
+        <EditText
+            android:layout_column="0"
+            android:layout_height="40dp"
+            android:id="@+id/questionText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="46dp"
+            android:text="what is a penguin?"/>
+
+        <TextView
+            android:layout_column="0"
+            android:text="Answer:"
+            android:layout_gravity="left"
+            android:id="@+id/answerLabel"
+            />
+        <TextView
+            android:layout_column="0"
+            android:layout_gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/answerText"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:layout_below="@+id/questionText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="44dp" />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Resources:"
+            android:layout_gravity="left"
+            android:id="@+id/resourcesLabel"
+            />
+        <TextView
+            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:id="@+id/resourceText"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask"
+            android:id="@+id/askButton"
+            android:layout_below="@+id/resourceText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="48dp"
+            android:onClick="askQuestion"/>
+    </GridLayout>
+</RelativeLayout>

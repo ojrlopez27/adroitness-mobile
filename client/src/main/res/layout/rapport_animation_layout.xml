@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:id="@+id/rapport_rel_layout"
+    tools:context="cc.corecomplex.androidproject.MainActivity$PlaceholderFragment" >
+
+    <FrameLayout
+        android:id="@+id/rapport_animation_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"  >
+    	
+    	<ImageView
+			  android:id="@+id/rapport_anim_image"
+			  android:layout_alignParentRight="true"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:src="@drawable/yahoo_animation" /> 
+        
+    </FrameLayout>
+       <!-- android:background="#0ABEF5"
+        android:padding="2dp"  -->
+        
+    
+</RelativeLayout>

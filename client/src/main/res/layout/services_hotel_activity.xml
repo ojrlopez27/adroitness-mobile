@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include android:id="@+id/decoration_toolbar" layout="@layout/decoration_toolbar"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/hotel_ui_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:hint="Enter Address, Zip, City, or Airport" />
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/address">
+
+                <EditText
+                    android:id="@+id/textStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:hint="Start(mm-dd-yyyy)"
+                    android:nestedScrollingEnabled="true"
+                    android:focusable="false" />
+
+                <EditText
+                    android:id="@+id/textEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:hint="End(mm-dd-yyyy)"
+                    android:nestedScrollingEnabled="true"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linear1"
+                android:weightSum="0.9">
+
+                <EditText
+                    android:id="@+id/rooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center_horizontal"
+                    android:hint="Rooms" />
+
+                <EditText
+                    android:id="@+id/adults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center_horizontal"
+                    android:hint="Adults" />
+
+                <EditText
+                    android:id="@+id/children"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center_horizontal"
+                    android:hint="Children" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hotelResults"
+                android:layout_below="@+id/linear2"
+                android:layout_above="@+id/fillFastBtn"
+                android:clickable="true"
+                >
+            </ListView>
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Search"
+                android:onClick="search"/>
+
+            <Button
+                android:id="@+id/fillFastBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/searchBtn"
+                android:layout_centerHorizontal="true"
+                android:text="Fill Fast"
+                android:onClick="fillFast"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/hotel_navigation"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#0099CC"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="1"
+        android:id="@+id/linear1">
+
+        <TextView
+            android:layout_weight="0.45"
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:linksClickable="true"/>
+
+        <ImageView
+            android:layout_weight="0.07"
+            android:layout_width="wrap_content"
+            android:id="@+id/im1"
+            android:src="@drawable/starbefore"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside" />
+        <ImageView
+            android:layout_weight="0.07"
+            android:layout_width="wrap_content"
+            android:id="@+id/im2"
+            android:src="@drawable/starbefore"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside" />
+        <ImageView
+            android:layout_weight="0.07"
+            android:layout_width="wrap_content"
+            android:id="@+id/im3"
+            android:src="@drawable/starbefore"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"/>
+        <ImageView
+            android:layout_weight="0.07"
+            android:layout_width="wrap_content"
+            android:id="@+id/im4"
+            android:src="@drawable/starbefore"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"/>
+        <ImageView
+            android:layout_weight="0.07"
+            android:layout_width="wrap_content"
+            android:id="@+id/im5"
+            android:src="@drawable/starbefore"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:layout_weight="0.2"
+            android:id="@+id/recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/linear1"
+        android:id="@+id/amenities"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <LinearLayout
+        android:layout_below="@+id/amenities"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight="0.5"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:autoLink="web"
+            android:linksClickable="true"/>
+
+        <TextView
+            android:layout_weight="0.5"
+            android:id="@+id/perNight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

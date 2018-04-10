@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="uid_array">
+        <item>General</item>
+        <item>Brock</item>
+        <item>Dana</item>
+    </string-array>
+</resources>

@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".services.location.view.LocationActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:columnCount="4" >
+
+        <TextView
+            android:text="Place:"
+            android:layout_gravity="left"
+            android:id="@+id/locationPlaceTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationPlace"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Latitude:"
+            android:layout_gravity="left"
+            android:id="@+id/locationLatitudeTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationLatitude"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Longitude:"
+            android:layout_gravity="left"
+            android:id="@+id/locationLongitudeTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationLongitude"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Altitude:"
+            android:layout_gravity="left"
+            android:id="@+id/locationAltitudeTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationAltitude"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Speed:"
+            android:layout_gravity="left"
+            android:id="@+id/locationSpeedTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationSpeed"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Accuracy:"
+            android:layout_gravity="left"
+            android:id="@+id/locationAccuracyTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationAccuracy"
+            android:ems="10"
+            />
+
+
+        <TextView
+            android:layout_column="0"
+            android:text="Address:"
+            android:layout_gravity="left"
+            android:id="@+id/locationAddressTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationAddress"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Country:"
+            android:layout_gravity="left"
+            android:id="@+id/locationCountryTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationCountry"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="State:"
+            android:layout_gravity="left"
+            android:id="@+id/locationStateTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationState"
+            android:ems="10"
+            />
+
+
+        <TextView
+            android:layout_column="0"
+            android:text="City:"
+            android:layout_gravity="left"
+            android:id="@+id/locationCityTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationCity"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Town:"
+            android:layout_gravity="left"
+            android:id="@+id/locationTownTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationTown"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Sub Area:"
+            android:layout_gravity="left"
+            android:id="@+id/locationSubAreaTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationSubArea"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Zip Code:"
+            android:layout_gravity="left"
+            android:id="@+id/locationZipCodeTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationZipCode"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="Time Zone:"
+            android:layout_gravity="left"
+            android:id="@+id/locationTimeZoneTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationTimeZone"
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_column="0"
+            android:text="WOEID:"
+            android:layout_gravity="left"
+            android:id="@+id/locationWoeidTxt"
+            />
+        <TextView
+            android:layout_gravity="left"
+            android:id="@+id/locationWoeid"
+            android:ems="10"
+            />
+
+        <!--<Space-->
+            <!--android:layout_row="4"-->
+            <!--android:layout_column="0"-->
+            <!--android:layout_columnSpan="3"-->
+            <!--android:layout_gravity="fill"-->
+            <!--/>-->
+
+        <Button
+            android:text="Current Location"
+            android:id="@+id/locationCurrentBtn"
+            android:layout_row="18"
+            android:layout_column="0"
+            android:onClick="showCurrentLocation"
+            />
+
+        <Button
+            android:text="Other Location"
+            android:id="@+id/locationOtherBtn"
+            android:layout_row="18"
+            android:layout_column="1"
+            android:onClick="showOtherLocation"
+            />
+    </GridLayout>
+</RelativeLayout>
