@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.services.nell.control.ViewHelper;
 
 public class NELLActivity extends AppCompatActivity {

@@ -9,9 +9,10 @@ import android.widget.TextView;
 
 import edu.cmu.adroitness.client.sensors.accelaration.control.ViewHelper;
 
-import com.yahoo.inmind.adroitness.R;
-import com.yahoo.inmind.comm.accelerometer.model.AccelerometerEvent;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.comm.accelerometer.model.AccelerometerEvent;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+
 
 import java.util.Date;
 

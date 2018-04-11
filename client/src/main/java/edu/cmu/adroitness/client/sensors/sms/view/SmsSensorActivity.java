@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.yahoo.inmind.adroitness.R;
+import edu.cmu.adroitness.client.R;
 
 import edu.cmu.adroitness.client.sensors.sms.control.ViewHelper;
 

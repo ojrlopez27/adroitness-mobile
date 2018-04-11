@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.services.generic.view.ServicesActivity;
 import edu.cmu.adroitness.client.services.weather.control.ViewHelper;

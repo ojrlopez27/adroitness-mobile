@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.commons.control.Util;
 import edu.cmu.adroitness.client.services.location.control.ViewHelper;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;

@@ -3,6 +3,7 @@ package edu.cmu.adroitness;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import edu.cmu.adroitness.client.R;
 
 import android.content.Intent;
 import android.os.Bundle;

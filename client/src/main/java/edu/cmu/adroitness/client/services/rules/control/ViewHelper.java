@@ -2,15 +2,15 @@ package edu.cmu.adroitness.client.services.rules.control;
 
 import android.app.Activity;
 
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.commons.rules.model.DecisionRule;
-import com.yahoo.inmind.commons.rules.model.PropositionalStatement;
-import com.yahoo.inmind.sensors.accelerometer.model.AccelerometerProposition;
-import com.yahoo.inmind.services.calendar.control.CalendarProposition;
-
 import java.util.HashMap;
+
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.client.sensors.accelerometer.model.AccelerometerProposition;
+import edu.cmu.adroitness.client.services.calendar.control.CalendarProposition;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
+import edu.cmu.adroitness.commons.rules.model.DecisionRule;
+import edu.cmu.adroitness.commons.rules.model.PropositionalStatement;
 
 
 /**

@@ -2,15 +2,18 @@ package edu.cmu.adroitness.client.services.calendar.control;
 
 import android.app.Activity;
 
-import com.yahoo.inmind.comm.calendar.model.CalendarNotificationEvent;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.services.calendar.model.CalendarEventVO;
-import com.yahoo.inmind.services.calendar.view.EventCreationFragment;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.client.commons.control.Util;
+import edu.cmu.adroitness.client.services.calendar.model.CalendarEventVO;
+import edu.cmu.adroitness.client.services.calendar.view.EventCreationFragment;
+import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
 
 
 /**
@@ -40,7 +43,9 @@ public class ViewHelper {
         }
         return instance;
     }
-
+    public static ViewHelper getInstance() {
+        return getInstance(null);
+    }
     public void setEventCreationFragment(EventCreationFragment eventCreationFragment) {
         this.eventCreationFragment = eventCreationFragment;
     }
@@ -64,22 +69,47 @@ public class ViewHelper {
                         .put(Constants.CALENDAR_NUMBER_OF_MONTHS, numberOfMonths));
     }
 
+    public void createCalendarEvent(Object caller) {
+        mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
+                .put(Constants.CALENDAR_MODE, Constants.CALENDAR_INSERT_EVENT)
+                .put(Constants.CALENDAR_EVENT_DATA, createEventVO()));
+    }
+
     public void createCalendarEvent(Object caller, CalendarEventVO calendarEventVO) {
         mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
-                        .put(Constants.CALENDAR_MODE, Constants.CALENDAR_INSERT_EVENT)
-                        .put(Constants.CALENDAR_EVENT_DATA, calendarEventVO));
+                .put(Constants.CALENDAR_MODE, Constants.CALENDAR_INSERT_EVENT)
+                .put(Constants.CALENDAR_EVENT_DATA, calendarEventVO));
+    }
+
+    public void updateCalendarEvent(Object caller, String eventId) {
+        mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
+                .put(Constants.CALENDAR_MODE, Constants.CALENDAR_UPDATE_EVENT)
+                .put(Constants.CALENDAR_EVENT_DATA, createEventVO().setId(eventId)));
     }
 
     public void updateCalendarEvent(Object caller, CalendarEventVO calendarEventVO) {
         mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
-                        .put(Constants.CALENDAR_MODE, Constants.CALENDAR_UPDATE_EVENT)
-                        .put(Constants.CALENDAR_EVENT_DATA, calendarEventVO));
+                .put(Constants.CALENDAR_MODE, Constants.CALENDAR_UPDATE_EVENT)
+                .put(Constants.CALENDAR_EVENT_DATA, calendarEventVO));
+    }
+    public void deleteEvents(Object caller, List<CalendarEventVO> deleteEventsList, List<CalendarEventVO> events) {
+        mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
+                        .put(Constants.CALENDAR_MODE, Constants.CALENDAR_DELETE_EVENTS)
+                        .put(Constants.CALENDAR_EVENT_DATA, deleteEventsList));
+        for( CalendarEventVO eventToDelete : deleteEventsList ){
+            for( CalendarEventVO originalEvent : events){
+                if( eventToDelete.getId().equals( originalEvent.getId() )){
+                    events.remove( originalEvent );
+                    break;
+                }
+            }
+        }
     }
 
     public void deleteEvents(Object caller, List<CalendarEventVO> deleteEventsList) {
         mMB.send(caller, MBRequest.build(Constants.MSG_PROCESS_EVENTS_CALENDAR)
-                        .put(Constants.CALENDAR_MODE, Constants.CALENDAR_DELETE_EVENTS)
-                        .put(Constants.CALENDAR_EVENT_DATA, deleteEventsList));
+                .put(Constants.CALENDAR_MODE, Constants.CALENDAR_DELETE_EVENTS)
+                .put(Constants.CALENDAR_EVENT_DATA, deleteEventsList));
     }
 
     public void deleteAllEvents(Object caller) {
@@ -126,5 +156,26 @@ public class ViewHelper {
 
     public String getAccountName() {
         return accountName;
+    }
+
+    protected CalendarEventVO createEventVO( ){
+        CalendarEventVO event = new CalendarEventVO()
+                .setSummary( eventCreationFragment.getSummary().getText().toString() )
+                .setLocation( eventCreationFragment.getLocation().getText().toString() )
+                .setDescription( eventCreationFragment.getDescription().getText().toString() );
+
+        event.setStartDate( Util.getDateTime((Date) eventCreationFragment.getStartDate().getTag(),
+                eventCreationFragment.getStartTime().getText().toString()));
+        event.setEndDate( Util.getDateTime((Date) eventCreationFragment.getEndDate().getTag(),
+                eventCreationFragment.getEndTime().getText().toString()));
+
+        ArrayList<String> attendees = new ArrayList<>();
+        attendees.add("somebody@cs.cmu.edu");
+        attendees.add("somebody@yahoo-inc.com");
+        event.setAttendees( attendees );
+        event.setEmailReminder(24 * 60); // one day in advance
+        event.setSmsReminder(10); // 10 minutes in advance
+        event.setNumberOfMonths(0);
+        return event;
     }
 }

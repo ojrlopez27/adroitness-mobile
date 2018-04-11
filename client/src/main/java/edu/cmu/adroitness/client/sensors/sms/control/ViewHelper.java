@@ -1,10 +1,10 @@
 package edu.cmu.adroitness.client.sensors.sms.control;
 
+import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.sensors.sms.view.SmsSensorActivity;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.comm.sms.model.IncomingSmsEvent;
-import com.yahoo.inmind.commons.control.Constants;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
+import edu.cmu.adroitness.comm.sms.model.IncomingSmsEvent;
 
 /**
  * Created by oscarr on 1/3/15.

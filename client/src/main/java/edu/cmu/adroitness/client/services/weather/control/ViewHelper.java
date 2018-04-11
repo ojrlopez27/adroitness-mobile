@@ -3,15 +3,14 @@ package edu.cmu.adroitness.client.services.weather.control;
 import android.app.Activity;
 import android.media.RingtoneManager;
 
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.commons.rules.model.DecisionRule;
-import com.yahoo.inmind.services.weather.control.WeatherProposition;
-
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
+import edu.cmu.adroitness.commons.rules.model.DecisionRule;
 
 
 /**

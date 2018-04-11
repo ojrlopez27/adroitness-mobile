@@ -2,9 +2,9 @@ package edu.cmu.adroitness.client.services.actrecog.control;
 
 import android.app.Activity;
 
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
 
 
 /**

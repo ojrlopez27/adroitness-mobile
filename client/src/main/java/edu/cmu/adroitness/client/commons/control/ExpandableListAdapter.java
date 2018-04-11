@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.yahoo.inmind.adroitness.R;
+import edu.cmu.adroitness.client.R;
 
 import java.util.HashMap;
 import java.util.List;

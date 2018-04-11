@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.services.googlespeechrecognition.control.ViewHelper;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
 import edu.cmu.adroitness.comm.nlg.model.NLGEvent;
