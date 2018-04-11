@@ -15,8 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import edu.cmu.adroitness.R;
-import com.yahoo.inmind.services.booking.model.HotelVO;
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.client.services.booking.model.HotelVO;
 
 import java.util.ArrayList;
 

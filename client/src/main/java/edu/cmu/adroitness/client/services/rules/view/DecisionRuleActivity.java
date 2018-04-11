@@ -8,9 +8,9 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.client.commons.control.UIutil;
 import edu.cmu.adroitness.client.services.rules.control.ViewHelper;
-import com.yahoo.inmind.commons.control.UIutil;
 
 public class DecisionRuleActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 

@@ -43,11 +43,11 @@ public class ExtendedRed5StreamingActivity extends Red5StreamingActivity {
             Toast.makeText( getApplicationContext(), event.getRed5StreamingServerIPAddress(),
                     Toast.LENGTH_LONG).show();
         }
-        if(event.getR5Stats()!= null)
+     /*   if(event.getR5Stats()!= null)
         {
-            Toast.makeText( getApplicationContext(), event.getR5Stats().toString(),
+            Toast.makeText( getApplicationContext(), event.getResult(),
                     Toast.LENGTH_LONG).show();
-        }
+        }*/
         if(event.getServiceStatus()!= null)
         {
             Toast.makeText( getApplicationContext(), event.getServiceStatus(),

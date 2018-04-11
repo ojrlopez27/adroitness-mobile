@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.yahoo.inmind.adroitness.R;
+import edu.cmu.adroitness.client.R;
 
 import edu.cmu.adroitness.client.sensors.audio.control.ViewHelper;
 

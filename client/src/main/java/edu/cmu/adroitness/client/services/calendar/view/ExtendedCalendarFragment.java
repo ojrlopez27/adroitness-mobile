@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-import com.yahoo.inmind.services.calendar.model.CalendarEventVO;
-import com.yahoo.inmind.services.calendar.view.EventCreationFragment;
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.client.services.calendar.model.CalendarEventVO;
+import edu.cmu.adroitness.client.services.calendar.view.EventCreationFragment;
 
 /**
  * Created by oscarr on 4/13/16.

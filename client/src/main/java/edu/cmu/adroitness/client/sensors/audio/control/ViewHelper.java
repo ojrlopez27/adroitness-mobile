@@ -2,10 +2,11 @@ package edu.cmu.adroitness.client.sensors.audio.control;
 
 import android.app.Activity;
 
+import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.sensors.audio.view.AudioRecordActivity;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
+
 
 import java.util.ArrayList;
 

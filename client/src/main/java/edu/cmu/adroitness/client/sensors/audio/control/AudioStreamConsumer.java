@@ -10,8 +10,8 @@ import android.media.AudioTrack;
 import android.widget.Toast;
 
 import edu.cmu.adroitness.client.sensors.audio.view.AudioRecordActivity;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.streaming.model.AudioRecordEvent;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.streaming.model.AudioRecordEvent;
 
 /**
  * Helper class to demonstrate that we can have multiple subscribers (consumers) waiting

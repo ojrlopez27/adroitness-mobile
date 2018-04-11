@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import edu.cmu.adroitness.R;
+import edu.cmu.adroitness.client.R;
 
 /**
  * A simple {@link Fragment} subclass.

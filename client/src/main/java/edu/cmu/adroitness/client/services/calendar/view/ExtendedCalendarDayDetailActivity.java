@@ -4,11 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
-import com.yahoo.inmind.comm.calendar.model.CalendarNotificationEvent;
-import com.yahoo.inmind.comm.generic.model.GooglePlayServicesEvent;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.services.calendar.view.CalendarDayDetailActivity;
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
+import edu.cmu.adroitness.comm.generic.model.GooglePlayServicesEvent;
 
 /**
  * These are the operations supported by this class:

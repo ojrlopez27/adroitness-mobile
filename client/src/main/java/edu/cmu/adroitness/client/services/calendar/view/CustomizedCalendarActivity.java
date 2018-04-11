@@ -7,15 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.client.commons.control.Util;
 import edu.cmu.adroitness.client.services.calendar.control.ViewHelper;
-import com.yahoo.inmind.comm.calendar.model.CalendarNotificationEvent;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.commons.control.Util;
-import com.yahoo.inmind.services.calendar.model.CalendarEventVO;
+import edu.cmu.adroitness.client.services.calendar.model.CalendarEventVO;
+
+import edu.cmu.adroitness.client.R;
+import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class CustomizedCalendarActivity extends AppCompatActivity {
     private ViewHelper helper;
@@ -45,7 +48,7 @@ public class CustomizedCalendarActivity extends AppCompatActivity {
         Date endDate = startDate;
         String endTime = "10:00";
         calendarEventVO = createEventVO( startDate, startTime, endDate, endTime);
-        helper.createCalendarEvent( this, calendarEventVO );
+        helper.createCalendarEvent( this, calendarEventVO);
     }
 
     public void updateCalendarEvent( View view ){
