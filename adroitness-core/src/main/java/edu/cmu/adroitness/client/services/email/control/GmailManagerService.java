@@ -124,7 +124,7 @@ public class GmailManagerService extends GenericService {
                     UtilServiceAPIs.initializeCredentials(mContext, null);
                     mGmailService = new com.google.api.services.gmail.Gmail.Builder(
                             transport, jsonFactory, UtilServiceAPIs.credential)
-                            .setApplicationName("InMind Yahoo")
+                            .setApplicationName("Adroitness")
                             .build();
                     if (resourceLocator.getAccount(Constants.GOOGLE_ACCOUNT) != null ) {
 
@@ -142,7 +142,7 @@ public class GmailManagerService extends GenericService {
                 {
                     mGmailService = new com.google.api.services.gmail.Gmail.Builder(
                             transport, jsonFactory, UtilServiceAPIs.credential)
-                            .setApplicationName("InMind Yahoo")
+                            .setApplicationName("Adroitness")
                             .build();
                     if( resourceLocator.getAccount(Constants.GOOGLE_ACCOUNT) != null )
                     {

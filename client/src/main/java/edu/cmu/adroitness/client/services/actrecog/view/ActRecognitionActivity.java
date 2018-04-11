@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.services.activity.view.ARContextCard;
 import edu.cmu.adroitness.client.services.activity.view.ActivityRecognitionSettings;
@@ -79,6 +82,7 @@ public class ActRecognitionActivity extends ServicesActivity {
         locationCard.unregisterReceiver(this);
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( ActivityRecognitionEvent event){
         tv.setText("Current Activity: " + helper.getActivityRecognitionName(event.getActivityType()) + " with Confidence: %" + event.getConfidence());
     }
@@ -87,6 +91,7 @@ public class ActRecognitionActivity extends ServicesActivity {
      * For testing purposes
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( LocationEvent event){
         //for testing purposes. Implement a proper GUI to show the results
     }
@@ -95,6 +100,7 @@ public class ActRecognitionActivity extends ServicesActivity {
      * For testing purposes
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( AccelerometerEvent event ){
         // ...
     }

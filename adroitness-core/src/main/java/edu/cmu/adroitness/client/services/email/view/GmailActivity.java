@@ -131,7 +131,7 @@ public class GmailActivity extends ServicesActivity {
                 R.layout.services_adapter_gmail_messages, gmailMessageVOList);
         gmailMessageAdapter.setGmailActivity((GmailActivity)gmailActivity);
         listView.setAdapter(gmailMessageAdapter);
-        decoration_toolbar.setTitle("Inmind");
+        decoration_toolbar.setTitle("Adroitness");
         //listView.setAdapter(gmailMessageVOList);
     }
 

@@ -1,5 +1,8 @@
 package edu.cmu.adroitness.client.services.nell.control;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.services.nell.view.NELLActivity;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
@@ -54,10 +57,12 @@ public class ViewHelper {
      * This event handler processes the response from NEIL Service
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(NellMacroReaderEvent event){
         mActivity.getResults( ).setText( event.getResultVO().getJsonPrettyString() );
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(NellMicroReaderEvent event){
         mActivity.getResults( ).setText( event.getResultVO().getJsonPrettyString() );
     }

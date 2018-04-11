@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.services.email.view.GmailActivity;
 import edu.cmu.adroitness.comm.email.model.GmailManagerEvent;
@@ -15,7 +18,7 @@ public class ExtendedGmailActivity extends GmailActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);}
 
-    @Override
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final GmailManagerEvent event)
     {
         if(!event.getMessageString().equals(""))

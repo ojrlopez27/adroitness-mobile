@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
@@ -71,7 +75,7 @@ public class ExtendedCalendarActivity extends CalendarActivity {
      * that you make a request (e.g., a query) or when a calendar update happens.
      * @param event
      */
-    @Override
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread( final CalendarNotificationEvent event ){
         if( event.isError() ){
             Toast.makeText( this, event.getNotification(), Toast.LENGTH_LONG).show();
@@ -112,7 +116,7 @@ public class ExtendedCalendarActivity extends CalendarActivity {
      * Event Handler for google play services
      * @param event
      */
-    @Override
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(GooglePlayServicesEvent event){
         if( event.isError() ){
             Toast.makeText( getApplicationContext(), event.getNotification(), Toast.LENGTH_LONG).show();

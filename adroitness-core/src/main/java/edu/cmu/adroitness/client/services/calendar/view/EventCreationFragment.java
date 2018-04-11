@@ -156,7 +156,7 @@ public class EventCreationFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         description.setText("This is a follow up meeting " + cont);
-                        summary.setText("InMind Meeting " + cont);
+                        summary.setText("Adroitness Meeting " + cont);
                         location.setText("CMU, Pittsburgh");
                         Calendar cal = Calendar.getInstance();
                         //By default, the event is created for the selected day

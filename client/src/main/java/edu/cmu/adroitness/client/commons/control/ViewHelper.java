@@ -3,6 +3,9 @@ package edu.cmu.adroitness.client.commons.control;
 import android.app.Activity;
 import android.content.Intent;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
 import edu.cmu.adroitness.comm.email.model.GmailManagerEvent;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
@@ -101,6 +104,7 @@ public class ViewHelper {
      * Event Handler. Here you can handle calendar events and error messages
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread( final CalendarNotificationEvent event ) {
         if (event.getNotification().equals(Constants.CALENDAR_USER_RECOVERABLE_EXCEPTION)) {
             this.mActivity.startActivityForResult((Intent) event.getParams(), Constants.REQUEST_AUTHORIZATION);
@@ -111,6 +115,7 @@ public class ViewHelper {
      * Event Handler. Here you can handle calendar events and error messages
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread( final GmailManagerEvent event ) {
         if(event.getNotification()!=null) {
             if (event.getNotification().equals(Constants.CALENDAR_USER_RECOVERABLE_EXCEPTION)) {

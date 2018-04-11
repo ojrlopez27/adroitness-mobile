@@ -12,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import edu.cmu.adroitness.client.R;
-
 import java.util.HashMap;
 import java.util.List;
 

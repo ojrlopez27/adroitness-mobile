@@ -9,6 +9,9 @@ import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.sensors.audio.view.AudioRecordActivity;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
 import edu.cmu.adroitness.comm.streaming.model.AudioRecordEvent;
@@ -63,6 +66,7 @@ public class AudioStreamConsumer extends Thread{
      * method plays the audio stream by using the AudioTrack class.
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final AudioRecordEvent event ){
         activity.runOnUiThread(new Runnable() {
             @Override

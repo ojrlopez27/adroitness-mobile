@@ -106,7 +106,7 @@ public class GmailMessageFragment extends Fragment {
             String query="";
                 query += "{ folderName: INBOX, ";
                 query += " labelName: unread, ";
-                query += " fromName: inmind, ";
+                query += " fromName: Adroitness, ";
                 query += " subject: merge, ";
                 query += " afterDate: "+ afterDate ;
                 query += " beforeDate: "+ beforeDate;

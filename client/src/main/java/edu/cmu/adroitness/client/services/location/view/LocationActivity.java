@@ -10,6 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.commons.control.Util;
 import edu.cmu.adroitness.client.services.location.control.ViewHelper;
@@ -153,6 +157,7 @@ public class LocationActivity extends AppCompatActivity {
      * ASYNCHRONOUS CALLS
      * @param locationEvent
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final LocationEvent locationEvent ){
         runOnUiThread(new Runnable() {
             @Override

@@ -10,6 +10,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.commons.control.UIutil;
 import edu.cmu.adroitness.client.commons.control.Util;
@@ -143,6 +146,7 @@ public class HotelReservationActivity extends AppCompatActivity {
      * Here you will receive the results for the hotels search. You must implement this method!
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final HotelReservationEvent event ){
         runOnUiThread(new Runnable() {
             @Override

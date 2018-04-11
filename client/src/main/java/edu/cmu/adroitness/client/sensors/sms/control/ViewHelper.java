@@ -1,5 +1,8 @@
 package edu.cmu.adroitness.client.sensors.sms.control;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.sensors.sms.view.SmsSensorActivity;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
@@ -47,6 +50,7 @@ public class ViewHelper {
                 .put(Constants.SENSOR_SETTING, Constants.SENSOR_START)); //in microseconds
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final IncomingSmsEvent event){
         mActivity.runOnUiThread(new Runnable() {
             @Override

@@ -125,7 +125,6 @@ public class CalendarController {
 
         ArrayList<String> attendees = new ArrayList<>();
         attendees.add("somebody@cs.cmu.edu");
-        attendees.add("somebody@yahoo-inc.com");
         event.setAttendees( attendees );
         event.setEmailReminder(24 * 60); // one day in advance
         event.setSmsReminder(10); // 10 minutes in advance

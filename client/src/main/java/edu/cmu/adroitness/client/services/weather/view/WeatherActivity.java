@@ -9,7 +9,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.cmu.adroitness.client.R;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.services.generic.view.ServicesActivity;
 import edu.cmu.adroitness.client.services.weather.control.ViewHelper;
@@ -127,6 +129,7 @@ public class WeatherActivity extends ServicesActivity {
      * EVENT HANDLER. Implement this method to process all the location updates
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final LocationEvent event){
         runOnUiThread(new Runnable() {
             @Override
@@ -144,6 +147,7 @@ public class WeatherActivity extends ServicesActivity {
      * EVENT HANDLER. Implement this method to process all the weather updates
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final WeatherEvent event){
         runOnUiThread(new Runnable() {
             @Override
