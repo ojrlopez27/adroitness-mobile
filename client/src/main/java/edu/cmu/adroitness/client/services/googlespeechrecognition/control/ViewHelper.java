@@ -8,6 +8,9 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.SurfaceView;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.commons.control.Util;
 import edu.cmu.adroitness.client.services.googlespeechrecognition.view.GoogleASR;
@@ -157,6 +160,7 @@ public class ViewHelper {
      * Response from NLG (MUF)
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final NLGEvent event){
         ((GoogleASR)mActivity).sendMessageToUnity( event.getOutput() );
         Log.d("NLGEvent", event.getOutput() );
@@ -167,12 +171,13 @@ public class ViewHelper {
      * the Multiuser Framework
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(final MiddlewareNotificationEvent event){
         startMultiuser( "ipaddress") ;
         Log.d("MiddlewareEvent", event.getMessage() );
     }
 
-
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final Red5StreamingEvent event){
        if(event.getServiceStatus().equals(Constants.RED5_STREAMING_STATUS_READY))
        {
@@ -186,6 +191,7 @@ public class ViewHelper {
        }
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final GoogleSpeechRecognitionEvent googleSpeechRecognitionEvent) {
         if(googleSpeechRecognitionEvent.getNotification()!=null) {
             if (googleSpeechRecognitionEvent.getNotification().equals(Constants.GOOGLE_SPEECH_START_NOTIFICATION)) {

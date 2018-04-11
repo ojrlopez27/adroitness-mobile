@@ -5,6 +5,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.comm.red5streaming.model.Red5StreamingEvent;
 
 public class ExtendedRed5StreamingActivity extends Red5StreamingActivity {
@@ -33,6 +36,7 @@ public class ExtendedRed5StreamingActivity extends Red5StreamingActivity {
      * Event Handler for Red5 streaming service
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Red5StreamingEvent event){
         if( event.getRed5StreamingError() != null){
             Toast.makeText( getApplicationContext(), event.getRed5StreamingError(),

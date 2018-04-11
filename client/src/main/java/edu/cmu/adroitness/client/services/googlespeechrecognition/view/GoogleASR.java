@@ -9,6 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.R;
 import edu.cmu.adroitness.client.services.googlespeechrecognition.control.ViewHelper;
 import edu.cmu.adroitness.comm.generic.control.MessageBroker;
@@ -53,6 +57,7 @@ public class GoogleASR extends AppCompatActivity {
      * This is the message sent by NLG from Multiuser framework
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(final NLGEvent event){
         Log.d("GoogleASR", event.getOutput() );
     }

@@ -1,5 +1,7 @@
 package com.yahoo.inmind.testing.middleware;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,17 +16,17 @@ import android.os.Looper;
 import android.support.test.InstrumentationRegistry;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
-import com.google.common.eventbus.Subscribe;
-import com.yahoo.inmind.comm.email.model.GmailManagerEvent;
-import com.yahoo.inmind.comm.generic.control.MessageBroker;
-import com.yahoo.inmind.comm.generic.model.MBRequest;
-import com.yahoo.inmind.commons.control.Constants;
-import com.yahoo.inmind.commons.control.ResourceLocator;
-import com.yahoo.inmind.commons.control.UtilServiceAPIs;
-import com.yahoo.inmind.services.email.control.GmailFiltersValidation;
-import com.yahoo.inmind.services.email.control.GmailManagerService;
-import com.yahoo.inmind.services.email.model.GmailFilterQueryInputVO;
-import com.yahoo.inmind.services.email.model.GmailMessageVO;
+
+import edu.cmu.adroitness.client.commons.control.Constants;
+import edu.cmu.adroitness.client.commons.control.ResourceLocator;
+import edu.cmu.adroitness.client.commons.control.UtilServiceAPIs;
+import edu.cmu.adroitness.client.services.email.control.GmailFiltersValidation;
+import edu.cmu.adroitness.client.services.email.control.GmailManagerService;
+import edu.cmu.adroitness.client.services.email.model.GmailFilterQueryInputVO;
+import edu.cmu.adroitness.client.services.email.model.GmailMessageVO;
+import edu.cmu.adroitness.comm.email.model.GmailManagerEvent;
+import edu.cmu.adroitness.comm.generic.control.MessageBroker;
+import edu.cmu.adroitness.comm.generic.model.MBRequest;
 
 //import org.mockito.ArgumentCaptor;
 
@@ -114,7 +116,7 @@ public class GmailAdapterTest {
 
     }
 
-    @Subscribe
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(GmailManagerEvent event)
     {
         Log.d("Gmail","Gmail Event");

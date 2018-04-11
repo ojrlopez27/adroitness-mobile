@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.sensors.accelaration.control.ViewHelper;
 
 import edu.cmu.adroitness.client.R;
@@ -67,6 +70,7 @@ public class AccelerationActivity extends AppCompatActivity {
 
     /**************************** EVENT HANDLERS **************************************************/
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent( final AccelerometerEvent event ){
         runOnUiThread(new Runnable() {
             @Override

@@ -17,7 +17,7 @@ public class NELLActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.services_nell_main);
+        setContentView(R.layout.services_nell_layout_main);
         helper = ViewHelper.getInstance( this );
         entityOrText = (EditText) findViewById(R.id.entityText);
         results = (EditText) findViewById(R.id.resultsNELL);

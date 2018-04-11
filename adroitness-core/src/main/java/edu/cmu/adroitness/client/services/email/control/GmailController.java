@@ -179,7 +179,7 @@ public class GmailController {
      *                           eg: "abc@gmail.com,def@gmail.com" or "abc#gmail.com"
      * You can add attachment in gmailMessageVO
      * Example: sendMessage(gmailMessageVO);
-     * GmailMessageVO: must contain: "abc@xyz.com, def@xyz.com", "Test email with Attachment: Inmind",
+     * GmailMessageVO: must contain: "abc@xyz.com, def@xyz.com", "Test email with Attachment: Adroitness",
      * "Hi this is test email with attachment" )
      * DISCLAIMER: Does not support attachment. There is seperate method to handle send new email with attachment.
      */
@@ -197,7 +197,7 @@ public class GmailController {
      *                           eg: "abc@gmail.com,def@gmail.com" or "abc#gmail.com"
      * You can add attachment in gmailMessageVO
      * Example: sendMessageWithAttachment(gmailMessageVO);
-     * GmailMessageVO "abc@xyz.com, def@xyz.com", "Test email with Attachment: Inmind",
+     * GmailMessageVO "abc@xyz.com, def@xyz.com", "Test email with Attachment: Adroitness",
      * "Hi this is test email with attachment", new File(fileLocation+"/filename.extension")
      */
     public void sendMessageWithAttachment( GmailMessageVO gmailMessageVO)

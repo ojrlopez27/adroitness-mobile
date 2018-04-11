@@ -58,7 +58,7 @@ public class GmailFilterQueryInputVO {
         return subject;
     }
 
-    /** Email Subject as String: example: "Inmind test" **/
+    /** Email Subject as String: example: "Adroitness test" **/
     public void setSubject(String subject) {
         this.subject = subject;
     }
@@ -122,8 +122,7 @@ public class GmailFilterQueryInputVO {
         return fileName;
     }
 
-    /** filename in attachment to be searched for: example 1: "*.pdf"
-     * example 2: "inmind_architecture.pptx" **/
+    /** filename in attachment to be searched for: example 1: "*.pdf"**/
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
@@ -139,7 +138,7 @@ public class GmailFilterQueryInputVO {
     String labelName;
     /** sender email id as String: example: "xyz@abcd.com" **/
     String senderEmailID;
-    /** Email Subject as String: example: "Inmind test" **/
+    /** Email Subject as String: example: "Adroitness test" **/
     String subject;
     //check date format -change to dateTime /Date and add label guidelines
     /** Date Object. Eg: new Date(System.currentTimeMillis()) or new Date(long someTimeInPast **/
@@ -155,8 +154,7 @@ public class GmailFilterQueryInputVO {
     String toName;
     /** has Attachment in email: new Boolean(true) or new Boolean(false) **/
     Boolean hasAtttachment;
-    /** filename in attachment to be searched for: example 1: "*.pdf"
-     * example 2: "inmind_architecture.pptx" **/
+    /** filename in attachment to be searched for: example 1: "*.pdf"**/
     String fileName;
     /** any email is starred as yellow, red, blue, green, purple, Orange and and few more special colored marks
      *  any star color marked email is searched for if the value is true. new Boolean(true) or new Boolean(false) **/

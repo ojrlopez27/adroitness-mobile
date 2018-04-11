@@ -1,4 +1,4 @@
-package com.yahoo.inmind.adroitness; /**
+package edu.cmu.adroitness; /**
  * Created by oscarr on 7/24/15.
  */
 

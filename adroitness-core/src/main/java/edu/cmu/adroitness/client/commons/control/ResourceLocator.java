@@ -131,7 +131,7 @@ public final class ResourceLocator {
 
 
     /**
-     * Add all the available InMind services here (those which extends GenericService)
+     * Add all the available Adroitness services here (those which extends GenericService)
      */
     public static void initializeServices(){
         mServicesCatalog = new ConcurrentHashMap<>();

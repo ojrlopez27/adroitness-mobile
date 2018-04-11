@@ -12,10 +12,10 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import edu.cmu.adroitness.client.R;
-
 import java.util.HashMap;
 import java.util.List;
+
+import edu.cmu.adroitness.client.R;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -51,13 +51,13 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.services_news_list_item, null);
+            //convertView = infalInflater.inflate(R.layout.services_news_list_item, null);
         }
 
-        TextView txtListChild = (TextView) convertView
+        /*TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.lblListItem);
 
-        txtListChild.setText(childText);
+        txtListChild.setText(childText);*/
         return convertView;
     }
 

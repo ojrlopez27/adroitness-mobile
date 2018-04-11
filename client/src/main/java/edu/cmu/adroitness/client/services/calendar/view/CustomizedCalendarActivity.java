@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.client.commons.control.Constants;
 import edu.cmu.adroitness.client.commons.control.Util;
 import edu.cmu.adroitness.client.services.calendar.control.ViewHelper;
@@ -70,6 +73,7 @@ public class CustomizedCalendarActivity extends AppCompatActivity {
      * Event Handler. Here you can handle calendar events and error messages
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread( CalendarNotificationEvent event ){
         if( event.isError() ){
             Toast.makeText( getApplicationContext(), event.getNotification(), Toast.LENGTH_LONG).show();
