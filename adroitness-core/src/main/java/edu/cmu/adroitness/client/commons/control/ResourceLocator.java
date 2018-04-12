@@ -466,7 +466,7 @@ public final class ResourceLocator {
     }
 
     public void bindServices(){
-        for(final Class service : mServicesHash.keySet()) {
+        for(final Class service : ((Map<Class, MiddServiceConnection>)mServicesHash).keySet()) {
             bindService( service );
         }
     }

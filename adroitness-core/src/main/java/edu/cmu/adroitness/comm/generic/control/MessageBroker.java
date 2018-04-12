@@ -14,7 +14,6 @@ import android.util.LruCache;
 import android.widget.Toast;
 
 import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import edu.cmu.adroitness.comm.generic.control.adapters.ActivRecogAdapter;
 import edu.cmu.adroitness.comm.generic.control.adapters.AlarmAdapter;
@@ -102,7 +101,7 @@ public final class MessageBroker {
         mCache = new LruCache<>(500);
         methodMap = new LruCache<>(500);
         mSubscribers = new HashMap<>();
-        mEventBus.register( this );
+        subscribe(this);
     }
 
 
@@ -273,8 +272,7 @@ public final class MessageBroker {
     /******************************* REQUEST AND EVENT HANDLERS ***********************************/
     /*******************************                            ***********************************/
     /**********************************************************************************************/
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
+    @Subscribe
     public void onEvent(MiddlewareNotificationEvent event){
         if( !event.getSourceName().equals( AccountPickerActivity.class.getName() ) ){
             chooseAccount();
@@ -358,11 +356,11 @@ public final class MessageBroker {
     public Object get(Object caller, final MBRequest request) {
         // pass the caller to the privacy and monitoring module
         return Util.executeSync(new Callable<Object>() {
-                @Override
-                public Object call() throws Exception {
-                    return executeRequest(request);
-                }
-            });
+            @Override
+            public Object call() throws Exception {
+                return executeRequest(request);
+            }
+        });
     }
 
     public static void set(MBRequest mbRequest) {
@@ -402,10 +400,10 @@ public final class MessageBroker {
      * @param subscriber
      */
     public void subscribe(Object subscriber) {
-        if (!mEventBus.isRegistered(subscriber)) {
+        if ( subscriber.getClass().isAnnotationPresent(Subscribe.class) && !mEventBus.isRegistered(subscriber)) {
             mEventBus.register(subscriber);
-            mResourceLocator.addActivity(subscriber);
         }
+        mResourceLocator.addActivity(subscriber);
     }
 
 
@@ -422,9 +420,7 @@ public final class MessageBroker {
         for (Class e : event) {
             mEventBus.addSubscriptionException(subscriber, e);
         }
-        if (!mEventBus.isRegistered(subscriber)) {
-            mEventBus.register(subscriber);
-        }
+        subscribe(subscriber);
     }
 
 
@@ -501,7 +497,7 @@ public final class MessageBroker {
     public List<MBRequest> getRequests(){
         return mRequests;
     }
-    
+
 
     /**********************************************************************************************/
     /**********************************              **********************************************/
