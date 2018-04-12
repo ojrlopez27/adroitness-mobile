@@ -1,6 +1,8 @@
 package edu.cmu.adroitness.client.services.email.control;
 
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.jsoup.Jsoup;
 
 import java.io.ByteArrayInputStream;
@@ -1477,6 +1479,7 @@ public class GmailManagerService extends GenericService {
 
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MiddlewareNotificationEvent event){
         if( event.getSourceName().equals( AccountPickerActivity.class.getName() ) ){
             initializeGmail();

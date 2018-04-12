@@ -13,6 +13,9 @@ import android.util.Log;
 import android.util.LruCache;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.comm.generic.control.adapters.ActivRecogAdapter;
 import edu.cmu.adroitness.comm.generic.control.adapters.AlarmAdapter;
 import edu.cmu.adroitness.comm.generic.control.adapters.AudioAdapter;
@@ -271,6 +274,7 @@ public final class MessageBroker {
     /*******************************                            ***********************************/
     /**********************************************************************************************/
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MiddlewareNotificationEvent event){
         if( !event.getSourceName().equals( AccountPickerActivity.class.getName() ) ){
             chooseAccount();

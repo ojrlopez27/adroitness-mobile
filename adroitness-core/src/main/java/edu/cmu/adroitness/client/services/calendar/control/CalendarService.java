@@ -28,6 +28,10 @@ import com.google.api.services.calendar.model.EventAttendee;
 import com.google.api.services.calendar.model.EventDateTime;
 import com.google.api.services.calendar.model.EventReminder;
 import com.google.api.services.calendar.model.Events;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import edu.cmu.adroitness.comm.calendar.model.CalendarNotificationEvent;
 import edu.cmu.adroitness.comm.generic.model.MiddlewareNotificationEvent;
 import edu.cmu.adroitness.client.commons.control.Constants;
@@ -783,6 +787,7 @@ public class CalendarService extends GenericService {
         super.onDestroy();
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MiddlewareNotificationEvent event){
         if( event.getSourceName().equals( AccountPickerActivity.class.getName() ) ){
             initializeCalendar();
