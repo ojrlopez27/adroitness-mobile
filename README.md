@@ -1,4 +1,13 @@
 # Adroitness-Mobile
+
+![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen.svg?cacheSeconds=2592000) 
+![language](https://img.shields.io/badge/language-Java-yellowgreen.svg?cacheSeconds=2592000) 
+![language](https://img.shields.io/badge/language-Android-yellowgreen.svg?cacheSeconds=2592000) 
+![version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000)
+![build](https://img.shields.io/badge/build-passed-green.svg?cacheSeconds=2592000)
+![test](https://img.shields.io/badge/test-passed-green.svg?cacheSeconds=2592000)
+![codacy](https://img.shields.io/badge/codacy-B-green.svg?cacheSeconds=2592000)
+
 Adroitness is an efficient Android-based middleware for building robust, high-performance interactive apps, alleviating the burdensome task of dealing with low-level architectural decisions and fine-grained implementation details by focusing on the separation of concerns and abstracting away the complexity of orchestrating device sensors and effectors, decision-making processes, and connection to remote services, while providing scaffolding for the development of higher-level functional features of interactive high-performance mobile apps.
 
 # Projects
