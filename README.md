@@ -13,8 +13,7 @@ Implementation:
 ![version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000)
 ![language](https://img.shields.io/badge/language-Java-yellowgreen.svg?cacheSeconds=2592000) 
 ![language](https://img.shields.io/badge/language-Android-yellowgreen.svg?cacheSeconds=2592000) 
-![language](https://img.shields.io/badge/language-Python-yellowgreen.svg?cacheSeconds=2592000) 
-![dependencies](https://img.shields.io/badge/dependencies-sent2vec-orange.svg?cacheSeconds=2592000)
+
 
 # Overview
 
