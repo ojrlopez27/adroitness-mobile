@@ -38,3 +38,13 @@ Please cite the [ICSA 2018 paper](http://www.cs.cmu.edu/~oscarr/pdf/publications
   pages         = "00--00"
 }
 ```
+and an extended version in our [ArXiv paper](https://arxiv.org/abs/XXXXX):
+
+```
+@misc{arxiv:muf:2019,
+  title = {Adroitness: An Android-based Middleware for Fast Development of High-performance Apps},
+  author = {{Romero}, {Oscar} J. and {Sakoju}, {Sushma}},
+  publisher = {ArXiv},
+  year          = "2019"
+}
+```
