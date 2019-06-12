@@ -27,7 +27,7 @@ In this repository you will find two different Android Studio projects:
 
 ## How to cite our work
 
-Please cite the [ICSA 2018 paper](http://www.cs.cmu.edu/~oscarr/pdf/publications/2018_icsa.pdf "Oscar J. Romero's Homepage") if you use Adroitness in your work:
+[ICSA 2018 paper](http://www.cs.cmu.edu/~oscarr/pdf/publications/2018_icsa.pdf "Oscar J. Romero's Homepage"):
 
 ```
 @inproceedings{adroitness:2018,
@@ -38,7 +38,7 @@ Please cite the [ICSA 2018 paper](http://www.cs.cmu.edu/~oscarr/pdf/publications
   pages         = "00--00"
 }
 ```
-and an extended version in our [ArXiv paper](https://arxiv.org/abs/XXXXX):
+and [ArXiv paper](https://arxiv.org/abs/XXXXX):
 
 ```
 @misc{arxiv:muf:2019,
